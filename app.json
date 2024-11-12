@@ -10,7 +10,10 @@
     "splash": {
       "image": "./assets/images/splash-1.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#353535"
+    },
+    "androidStatusBar": { 
+     "barStyle": "light-content" 
     },
     "ios": {
       "supportsTablet": true

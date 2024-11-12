@@ -2,24 +2,33 @@ import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react
 import React from "react";
 import { useRouter } from "expo-router";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import Animated, { FadeInDown, FadeInRight } from "react-native-reanimated";
+import { StatusBar } from "expo-status-bar";
+
 
 const Page = () => {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
+      <StatusBar style="light" />
       <ImageBackground 
         source={require('@/assets/images/getting-started.jpg')}
         style={{flex: 1}}
         resizeMode="cover"
       >
       <View style={styles.wrapper}>
-      <Text style={styles.title}>HBTV News</Text>
-      <Text style={styles.tagline}>Stay Informed, Stay Ahead</Text>
-      <Text style={styles.description}>HBTV News brings you the latest headlines, breaking news, and in-depth analysis from around the world. With a sleek, user-friendly interface and real-time updates, HBTV News ensures you never miss a story. Stay informed and stay ahead with HBTV News, your trusted source for accurate and timely news coverage.</Text>
-      <TouchableOpacity style={styles.btn} onPress={() => router.replace("/(tabs)")}>
-        <Text style={styles.btnText}>Go to Home Screen</Text>
-      </TouchableOpacity>
+        <Animated.Text style={styles.title}
+          entering={FadeInRight.delay(300).duration(500)}>HBTV News</Animated.Text>
+        <Animated.Text style={styles.tagline}
+          entering={FadeInRight.delay(300).duration(500)}>Stay Informed, Stay Ahead</Animated.Text>
+        <Animated.Text style={styles.description}
+          entering={FadeInRight.delay(700).duration(500)}>HBTV News brings you the latest headlines, breaking news, and in-depth analysis from around the world. With a sleek, user-friendly interface and real-time updates, HBTV News ensures you never miss a story. Stay informed and stay ahead with HBTV News, your trusted source for accurate and timely news coverage.</Animated.Text>
+        <Animated.View entering={FadeInDown.delay(1200).duration(500)}>
+          <TouchableOpacity style={styles.btn} onPress={() => router.replace("/(tabs)")}>
+            <Text style={styles.btnText}>Get Started</Text>
+          </TouchableOpacity>
+        </Animated.View>
       </View>
       </ImageBackground>
     </View>
@@ -65,11 +74,16 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   btn: {
-    backgroundColor: Colors.tint,
+    backgroundColor: '#1DA000',
     paddingVertical: 15,
+    marginVertical: 20,
+    alignItems: 'center',
+    borderRadius: 10,
 
   },
   btnText: {
-
+    color: Colors.white,
+    fontSize: 16,
+    fontWeight: '700'
   }
 });
