@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "expo-news-app-starter",
-    "slug": "expo-news-app-starter",
+    "name": "htbv-news",
+    "slug": "htbv-news",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "HBTV-News",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash-1.png",
