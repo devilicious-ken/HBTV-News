@@ -1,11 +1,11 @@
 # Welcome to HBTV-News 👋
 
 
-# Leader
+### Leader :
 
 Bacoy, Kent Brian O.
 
-# Members 
+### Members :
 
 Tagam, Carlene Caye P.
 
