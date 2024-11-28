@@ -12,7 +12,7 @@ const Header = (props: Props) => {
   return (
     <View style={styles.container}>
         <View style={styles.userInfo}>
-            <Image source={{uri: 'https://xsgames.co/randomusers/avatar.php?g=female'}} style={styles.userImg}/>
+            <Image source={{uri: 'https://xsgames.co/randomusers/avatar.php?g=pixel'}} style={styles.userImg}/>
             <View style={{gap: 3}}>
                 <Text style={styles.welcomeTxt}>Welcome</Text>
                 <Text style={styles.userTxt}>devilicious_ken</Text>

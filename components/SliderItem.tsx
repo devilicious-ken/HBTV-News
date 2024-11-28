@@ -1,9 +1,10 @@
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { NewsDataType } from '@/types'
 import Animated,  { Extrapolation, interpolate, SharedValue, useAnimatedStyle } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Colors } from '@/constants/Colors'
+import { Link } from 'expo-router'
 
 type Props = {
     slideItem: NewsDataType,
@@ -36,6 +37,8 @@ const SliderItem = ({slideItem, index, scrollX}: Props) => {
   };
  });
   return (
+    <Link href={`/news/${slideItem.article_id}`} asChild>
+    <TouchableOpacity>
     <Animated.View
     style={[styles.itemWrapper, rnStyle]}
     key={slideItem.article_id}
@@ -60,6 +63,8 @@ const SliderItem = ({slideItem, index, scrollX}: Props) => {
      </LinearGradient>
      
     </Animated.View>
+    </TouchableOpacity>
+    </Link>
   )
 }
 

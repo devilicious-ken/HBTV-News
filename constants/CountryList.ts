@@ -1,6 +1,6 @@
 const CountryList = [ 
   {name: 'All', code: '',selected: false,}, 
-  {name: 'India', code: 'IN',selected: false,}, 
+  {name: 'Philippines', code: 'PH',selected: false,}, 
   {name: 'Australia', code: 'AU',selected: false,}, 
   {name: 'United Arab Emirates', code: 'AE',selected: false,}, 
   {name: 'United Kingdom', code: 'GB',selected: false,}, 

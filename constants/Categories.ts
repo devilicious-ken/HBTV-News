@@ -41,6 +41,12 @@ const newsCategoryList = [
     slug: 'business',
     selected: false,
   },
+  {
+    id: 8,
+    title: 'Arts',
+    slug: 'arts',
+    selected: false,
+  },
 ];
 
 export default newsCategoryList;

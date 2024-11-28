@@ -25,7 +25,7 @@ const Page = (props: Props) => {
   
   const getBreakingNews = async() => {
     try {
-      const URL = `https://newsdata.io/api/1/news?apikey=${process.env.EXPO_PUBLIC_API_KEY}&country=ph&language=en&image=1&removeduplicate=1&size=5`
+      const URL = `https://newsdata.io/api/1/news?apikey=${process.env.EXPO_PUBLIC_API_KEY}&language=en&image=1&removeduplicate=1&size=5`
       const response = await axios .get(URL);
 
       //console.log('News Data:',response.data);
@@ -44,7 +44,7 @@ const Page = (props: Props) => {
       if( category.length !== 0){
         categoryString = `&category=${category}`
       }
-      const URL = `https://newsdata.io/api/1/news?apikey=${process.env.EXPO_PUBLIC_API_KEY}&language=en&image=1&removeduplicate=1&size=5${categoryString}`
+      const URL = `https://newsdata.io/api/1/news?apikey=${process.env.EXPO_PUBLIC_API_KEY}&language=en&image=1&removeduplicate=1&size=10${categoryString}`
       const response = await axios .get(URL);
 
       //console.log('News Data:',response.data);
@@ -66,7 +66,7 @@ const Page = (props: Props) => {
   return (
     <ScrollView style={[styles.container, {paddingTop: safeTop}]}>
       <Header />
-      <SearchBar />
+      <SearchBar withHorizontalPadding={true}/>
       {isLoading ? (
         <Loading size={'large'}/>
       ) : ( 
