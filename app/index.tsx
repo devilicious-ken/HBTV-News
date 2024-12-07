@@ -25,7 +25,7 @@ const Page = () => {
         <Animated.Text style={styles.description}
           entering={FadeInRight.delay(700).duration(500)}>HBTV News brings you the latest headlines, breaking news, and in-depth analysis from around the world. With a sleek, user-friendly interface and real-time updates, HBTV News ensures you never miss a story. Stay informed and stay ahead with HBTV News, your trusted source for accurate and timely news coverage.</Animated.Text>
         <Animated.View entering={FadeInDown.delay(1200).duration(500)}>
-          <TouchableOpacity style={styles.btn} onPress={() => router.replace("/(tabs)")}>
+          <TouchableOpacity style={styles.btn} onPress={() => router.replace("/(auth)/sign-in")}>
             <Text style={styles.btnText}>Get Started</Text>
           </TouchableOpacity>
         </Animated.View>
